@@ -1,0 +1,76 @@
+<h1>#</h1>
+
+<p>map</p>
+
+<h1>#</h1>
+
+<h3>chapter01</h3>
+
+<p>echo 和 echom， echom会缓存</p>
+
+<h3>chapter02</h3>
+
+<p>:set 用法</p>
+
+<h3>chapter03</h3>
+
+<p>:map 用法 </p>
+
+<h3>chapter04</h3>
+
+<p>:imap
+:nmap
+:vmap
+三种模式下的map</p>
+
+<h3>chapter05</h3>
+
+<p>:nunmap
+:iunmap
+:vunmap
+三种unmap</p>
+
+<p>:nnoremap
+非循环map</p>
+
+<h3>chapter06</h3>
+
+<p>:let mapleader = "-"
+设置老板键
+:nnoremap <leader>d dd
+使用老板键</p>
+
+<p>:let maplocalleader = "\"
+设置小老板键</p>
+
+<h3>chapter07</h3>
+
+<p>:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+一件分屏编辑配置文件，使用了老板键哦， <cr> 是真的cr，不是ctrl+v</p>
+
+<p>ZZ
+大写zz，一键关闭分的第二屏，自带保存</p>
+
+<p>:nnoremap <leader>sv :source $MYVIMRC<cr>
+一键激活配置文件</p>
+
+<h3>chapter08</h3>
+
+<p>:iabbrev adn and</p>
+
+<p>自动纠错命令，在编辑模式下纠正adn为and</p>
+
+<p>:iabbrev @@    steve@yu.com</p>
+
+<p>设置私人邮箱版权等</p>
+
+<h4>chapter09</h4>
+
+<p>:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel</p>
+
+<p>瞬间给左右加上双引号!</p>
+
+<h3>chapter10</h3>
+
+<p>:inoremap <esc> <nop>
+关闭你的esc</p>
