@@ -1,6 +1,9 @@
-##
-map
-##
+##死命学习vimscript##
+
+##声明，这个是个人理解学习写vim脚本，纯粹的学习，不带玩的。下面应该会学习js+css，ios， java
+
+##目前还有雅思考试，更新于今天。
+
 ### chapter01
 echo 和 echom， echom会缓存
 
