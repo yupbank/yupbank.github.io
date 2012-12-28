@@ -74,3 +74,56 @@
 
 <p>:inoremap <esc> <nop>
 关闭你的esc</p>
+
+<h3>chapter11</h3>
+
+<p>:setlocal 只给当前编辑有效果</p>
+
+<p>:nnoremap <buffer> Q add 这个效果有点不一样，对每一个buffer产生，对vssplit出来的新窗口等拥有神奇的效果</p>
+
+<h3>chapter12</h3>
+
+<p>:autocmd BufWritePre/BufNewFile/etc <em>/</em>.html/*.js :write/:normal gg=G
+:autocmd FileType python nnoremap <buffer> <localleader>c I#</p>
+
+<p>autocmd可以监听各种事件，比如写文件，创建新文件，比如当前是python文件，然后执行下面的操作，保存？设置gg=G？设置当前vim老板键+c 对句子加注释 #?</p>
+
+<h3>chapter13</h3>
+
+<p>:autocmd FileType python     :iabbrev <buffer> iff if:<left></p>
+
+<p>:autocmd FileType javascript :iabbrev <buffer> iff if ()<left></p>
+
+<p>自动修改不同filetype的iff为对应语言的 if正确</p>
+
+<h3>chapter14</h3>
+
+<p>:autocmd BufWrite * :sleep 200m
+傻逼作者，睡200分钟。。。</p>
+
+<p>:augroup testgroup
+:    autocmd BufWrite * :echom "Foo"
+:    autocmd BufWrite * :echom "Bar"
+:augroup END</p>
+
+<p>据作者说是会产生 输出 Foo和bar</p>
+
+<p>:augroup uncompress
+:  au!
+:  au BufEnter *.gz %!gunzip
+:augroup END
+加 au！ 是为了，防止这个autocommand被执行两次，比如source一下vimrc，还会再被执行的时候，不会再autocommand一下</p>
+
+<h3>chapter15</h3>
+
+<p>:onoremap p i(</p>
+
+<p>这个其实是把i( 加上自定义的名字p
+加进去vimrc后， dp = di(  了呢。</p>
+
+<p>:onoremap il( :<c-u>normal! F)vi(<cr>
+:onoremap in( :<c-u>normal! f(vi(<cr></p>
+
+<p>这些厉害的语句大概是在说，cin(/cil( 命令可以删除括号内或者其他什么的吧。。太厉害，先不纠结了</p>
+
+<h3>chapter16</h3>

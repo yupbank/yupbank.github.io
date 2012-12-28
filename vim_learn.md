@@ -68,6 +68,64 @@ ZZ
 :inoremap <esc> <nop>
 关闭你的esc
 
+###chapter11
+
+:setlocal 只给当前编辑有效果
+
+:nnoremap <buffer> Q add 这个效果有点不一样，对每一个buffer产生，对vssplit出来的新窗口等拥有神奇的效果
+
+###chapter12
+
+:autocmd BufWritePre/BufNewFile/etc */*.html/*.js :write/:normal gg=G
+:autocmd FileType python nnoremap <buffer> <localleader>c I#
+
+autocmd可以监听各种事件，比如写文件，创建新文件，比如当前是python文件，然后执行下面的操作，保存？设置gg=G？设置当前vim老板键+c 对句子加注释 #?
+
+
+###chapter13
+:autocmd FileType python     :iabbrev <buffer> iff if:<left>
+
+:autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+
+自动修改不同filetype的iff为对应语言的 if正确
+
+
+###chapter14
+
+:autocmd BufWrite * :sleep 200m
+傻逼作者，睡200分钟。。。
+
+:augroup testgroup
+:    autocmd BufWrite * :echom "Foo"
+:    autocmd BufWrite * :echom "Bar"
+:augroup END
+
+据作者说是会产生 输出 Foo和bar
+
+:augroup uncompress
+:  au!
+:  au BufEnter *.gz	%!gunzip
+:augroup END
+加 au！ 是为了，防止这个autocommand被执行两次，比如source一下vimrc，还会再被执行的时候，不会再autocommand一下
+
+###chapter15
+
+:onoremap p i(
+
+这个其实是把i( 加上自定义的名字p
+加进去vimrc后， dp = di(  了呢。
+
+:onoremap il( :<c-u>normal! F)vi(<cr>
+:onoremap in( :<c-u>normal! f(vi(<cr>
+
+这些厉害的语句大概是在说，cin(/cil( 命令可以删除括号内或者其他什么的吧。。太厉害，先不纠结了
+
+
+
+###chapter16
+
+
+
 
 
 
