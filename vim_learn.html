@@ -127,3 +127,79 @@
 <p>这些厉害的语句大概是在说，cin(/cil( 命令可以删除括号内或者其他什么的吧。。太厉害，先不纠结了</p>
 
 <h3>chapter16</h3>
+
+<p>:onoremap ih :<c-u>execute "normal! ?^==\+$\r:nohlsearch\rkvg_"<cr></p>
+
+<p>这个就厉害了， ih是映射</p>
+
+<p>:execute "normal! ?^==\+$\r:nohlsearch\rkvg<em>"<cr>
+这个就厉害了
+normal! 执行在normal模式下命令，但是有一个问题就是，不认识 <cr>这样的..
+所以要excute.
+?搜索， ^==\+$\r 匹配两个以上==
+:nohlsearch\r 取消搜索的高亮
+kvg</em> 向上一行选择到尾巴</p>
+
+<h3>chapter17</h3>
+
+<p>:set statusline=%f
+设置下面的状态栏：%f 是文件路径</p>
+
+<p>:set statusline+=\ -\ <br />
+状态栏还可以叠加，比如后面加 空格 - 空格</p>
+
+<p>%y 表示文件类型
+%l 表示当前行数
+%L 表示总行数
+%数字  表示左边填充几个字符的空格
+%-数字  表示在右边填充几个字符
+%0数字  将会用0去填充空格
+%F 表示全路径</p>
+
+<h3>chapter18</h3>
+
+<p>" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}</p>
+
+<p>首先 augroup是给设定语句分group， 然后， foldmethod就会把 {{{ 到 }}}自动折叠了，此时za键可以打开和关闭她们</p>
+
+<p>:setlocal wrap  = :setl wrap</p>
+
+<p>最重要 -> :help foldlevelstart</p>
+
+<h3>chapter19</h3>
+
+<p>:let foo = "bar"
+:echo foo <br />
+将会输出bar，这个叫设置变量</p>
+
+<p>:set textwidth=80
+:echo &amp;textwidth
+首先textwidth会变成80，然后输出80. 基本上&amp;就是取设定的值的意思</p>
+
+<p>:let &amp;textwidth = 100
+:set textwidth?
+首先textwidth会变成100， 然后下句会输出"textwidth=100"， 因为加了？</p>
+
+<p>:let &amp;l:number = 1
+设定了局部的行号出现，=0就是不出现。 &amp;l为local的意思</p>
+
+<p>:let @a = "hello!"
+:echo @a
+pa
+先输出 hello， @为寄存器的意思， @a就是寄存一个a的变量，所以pa将会把hello粘贴到p那个地方</p>
+
+<p>:echo @"
+就会把刚刚y复制的东西，打印出来 " 是未命名寄存器，就是刚刚y复制的内容咯</p>
+
+<p>:echo @/
+就会把刚刚search的pattern打印出来</p>
+
+<p>:help registers
+这个最关键</p>
+
+<h3>chapter20</h3>
