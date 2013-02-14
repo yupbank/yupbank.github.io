@@ -124,8 +124,83 @@ autocmd可以监听各种事件，比如写文件，创建新文件，比如当�
 
 ###chapter16
 
+:onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+
+这个就厉害了， ih是映射
+
+:execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+这个就厉害了
+normal! 执行在normal模式下命令，但是有一个问题就是，不认识 <cr>这样的..
+所以要excute.
+?搜索， ^==\\+$\r 匹配两个以上==
+:nohlsearch\r 取消搜索的高亮
+kvg_ 向上一行选择到尾巴
+
+###chapter17
+
+:set statusline=%f
+设置下面的状态栏：%f 是文件路径
+
+:set statusline+=\ -\      
+状态栏还可以叠加，比如后面加 空格 - 空格
+
+%y 表示文件类型
+%l 表示当前行数
+%L 表示总行数
+%数字  表示左边填充几个字符的空格
+%-数字  表示在右边填充几个字符
+%0数字  将会用0去填充空格
+%F 表示全路径
+
+###chapter18
+
+" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+首先 augroup是给设定语句分group， 然后， foldmethod就会把 {{{ 到 }}}自动折叠了，此时za键可以打开和关闭她们
+
+:setlocal wrap  = :setl wrap
+
+最重要 -> :help foldlevelstart
+
+###chapter19
+
+:let foo = "bar"
+:echo foo    
+将会输出bar，这个叫设置变量
+
+:set textwidth=80
+:echo &textwidth
+首先textwidth会变成80，然后输出80. 基本上&就是取设定的值的意思
 
 
+:let &textwidth = 100
+:set textwidth?
+首先textwidth会变成100， 然后下句会输出"textwidth=100"， 因为加了？
+
+
+:let &l:number = 1
+设定了局部的行号出现，=0就是不出现。 &l为local的意思
+
+:let @a = "hello!"
+:echo @a
+pa
+先输出 hello， @为寄存器的意思， @a就是寄存一个a的变量，所以pa将会把hello粘贴到p那个地方
+
+:echo @"
+就会把刚刚y复制的东西，打印出来 " 是未命名寄存器，就是刚刚y复制的内容咯
+
+:echo @/
+就会把刚刚search的pattern打印出来
+
+:help registers
+这个最关键
+
+###chapter20
 
 
 
