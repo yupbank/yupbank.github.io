@@ -1,2 +1,0 @@
-yupbank.github.com
-==================
