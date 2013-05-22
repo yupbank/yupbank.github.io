@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT:regular,italic' rel='stylesheet' type='text/css' />
+        <link rel="profile" href="http://microformats.org/profile/hcard" />
+        <meta charset="utf-8">
+
+        <title>t / yupbank</title>
+
+        
+            <link href="http://feeds2.feedburner.com/stevelosh"
+                  rel="alternate" title="yupbank"
+                  type="application/atom+xml" />
+        
+
+        
+            <link rel="stylesheet" href="/media/css/aal.css"      type="text/css" media="screen" charset="utf-8" />
+            <link rel="stylesheet" href="/media/css/sjl.css"      type="text/css" media="screen" charset="utf-8" />
+            <link rel="stylesheet" href="/media/css/print.css"    type="text/css" media="print" charset="utf-8" />
+            
+    <link rel="stylesheet"
+          href="/media/css/pygments-monokai-light.css"
+          type="text/css" media="screen" charset="utf-8" />
+
+        
+
+        
+            <script data-cfasync="false" src="/media/js/jquery.js" type="text/javascript"></script>
+            <script data-cfasync="false" src="/media/js/jquery.timeago.js" type="text/javascript"></script>
+            <script data-cfasync="false" src="/media/js/sjl.js" type="text/javascript"></script>
+            <script data-cfasync="false" src="/media/js/print.js" type="text/javascript"></script>
+
+            <script data-cfasync="false" type="text/javascript">
+                /* <![CDATA[ */
+                (function() {
+                var s = document.createElement('script');
+                var t = document.getElementsByTagName('script')[0];
+
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
+
+                t.parentNode.insertBefore(s, t);
+                })();
+                /* ]]> */
+            </script>
+
+            
+        
+
+        <link rel="openid.server" href="http://www.myopenid.com/server" />
+        <link rel="openid.delegate" href="http://stevelosh.myopenid.com/" />
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-15328874-2']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="top group">
+                <header>
+                    <a href="/">yupbank</a>
+                </header>
+
+                <nav>
+                    <a href="/blog/">Blog</a>
+                    <span class="sep">-</span>
+                    <a href="/projects">Projects</a>
+                    <span class="sep">-</span>
+                    <a href="/about/">About</a>
+                    <span class="sep">-</span>
+                    <a href="http://feeds2.feedburner.com/stevelosh">Feed</a>
+                </nav>
+            </div>
+
+            <div class="hr">&nbsp;</div>
+
+            <div class="content">
+                
+                    
+                        
+    <div id="leaf-title">
+        <h1><a href="/projects/t/">t</a></h1>
+    </div>
+
+
+    <div id="leaf-stats" class="group">
+        
+        <p>
+            Posted
+            <span class="timeago"
+                  title="2009-09-11T19:03:29-0400">
+            </span>
+            on September 11, 2009.
+        </p>
+    </div>
+
+    <div id="leaf-content" class="">
+        
+            <!-- Hyde::Article::Begin -->
+                
+                    <p><code>t</code> is a command-line todo list manager for people that want to <em>finish</em>
+tasks, not&nbsp;organize&nbsp;them.</p>
+<p>The code is in a <a href="http://bitbucket.org/sjl/t/">Mercurial repository</a> on <a href="http://bitbucket.org/">BitBucket</a>.</p>
+<p><img alt="Screenshot of t" src="/media/images/projects/t/t-screenshot.png" title="Screenshot of t" /></p>
+<div class="toc">
+<ul>
+<li><a href="#why-t">Why t?</a><ul>
+<li><a href="#it-does-the-simplest-thing-that-could-possibly-work">It Does the Simplest Thing That Could&nbsp;Possibly&nbsp;Work</a></li>
+<li><a href="#its-flexible">It&#8217;s&nbsp;Flexible</a></li>
+<li><a href="#it-plays-nice-with-version-control">It Plays Nice with&nbsp;Version&nbsp;Control</a></li>
+</ul>
+</li>
+<li><a href="#installing-t">Installing&nbsp;t</a></li>
+<li><a href="#using-t">Using t</a><ul>
+<li><a href="#add-a-task">Add&nbsp;a&nbsp;Task</a></li>
+<li><a href="#list-your-tasks">List&nbsp;Your&nbsp;Tasks</a></li>
+<li><a href="#finish-a-task">Finish&nbsp;a&nbsp;Task</a></li>
+<li><a href="#edit-a-task">Edit&nbsp;a&nbsp;Task</a></li>
+<li><a href="#delete-the-task-list-if-its-empty">Delete the Task List if&nbsp;it&#8217;s&nbsp;Empty</a></li>
+</ul>
+</li>
+<li><a href="#tips-and-tricks">Tips and Tricks</a><ul>
+<li><a href="#count-your-tasks">Count&nbsp;Your&nbsp;Tasks</a></li>
+<li><a href="#put-your-task-count-in-your-bash-prompt">Put Your Task Count in Your&nbsp;Bash&nbsp;Prompt</a></li>
+<li><a href="#multiple-lists">Multiple&nbsp;Lists</a></li>
+<li><a href="#distributed-bugtracking">Distributed&nbsp;Bugtracking</a></li>
+</ul>
+</li>
+<li><a href="#problems-contributions-etc">Problems,&nbsp;Contributions,&nbsp;Etc</a></li>
+</ul>
+</div>
+<h2 id="why-t">Why&nbsp;t?</h2>
+<p>Yeah, I know, <em>another</em> command-line todo list manager. Several others already
+exist (<a href="http://ginatrapani.github.com/todo.txt-cli/">todo.txt</a> and <a href="http://taskwarrior.org/projects/show/taskwarrior/">TaskWarrior</a> come to mind), so why make&nbsp;another&nbsp;one?</p>
+<h3 id="it-does-the-simplest-thing-that-could-possibly-work">It Does the Simplest Thing That Could&nbsp;Possibly&nbsp;Work</h3>
+<p>Todo.txt and TaskWarrior are feature-packed. They let you tag tasks, split
+them into projects, set priorities, order them, color-code them, and&nbsp;much&nbsp;more.</p>
+<p><strong>That&#8217;s&nbsp;the&nbsp;problem.</strong></p>
+<p>It&#8217;s easy to say &#8220;I&#8217;ll just organize my todo list a bit&#8221; and spend 15 minutes
+tagging your tasks. In those 15 minutes you probably could have <em>finished</em> a
+couple&nbsp;of&nbsp;them.</p>
+<p><code>t</code> was inspired by <a href="http://github.com/rupa/j2/">j</a>. It&#8217;s simple, messy, has almost no features, and is
+extremely effective at the one thing it does. With <code>t</code> the only way to make
+your todo list prettier is to <strong>finish some damn tasks</strong>.</p>
+<h3 id="its-flexible">It&#8217;s&nbsp;Flexible</h3>
+<p><code>t</code>&#8216;s simplicity makes it&nbsp;extremely&nbsp;flexible.</p>
+<p>Want to edit a bunch of tasks at once? Open the list in a&nbsp;text&nbsp;editor.</p>
+<p>Want to view the lists on a computer that doesn&#8217;t have <code>t</code> installed? Open the
+list in a&nbsp;text&nbsp;editor.</p>
+<p>Want to synchronize the list across a couple of computers? Keep your task
+lists in a <a href="https://www.getdropbox.com/">Dropbox</a>&nbsp;folder.</p>
+<p>Want to use it as a distributed bug tracking system like <a href="http://bugseverywhere.org/">BugsEverywhere</a>?
+Make the task list a <code>bugs</code> file in the&nbsp;project&nbsp;repository.</p>
+<h3 id="it-plays-nice-with-version-control">It Plays Nice with&nbsp;Version&nbsp;Control</h3>
+<p>Other systems keep your tasks in a plain text file. This is a good thing, and
+<code>t</code> follows&nbsp;their&nbsp;lead.</p>
+<p>However, some of them append new tasks to the end of the file when you create
+them. This is not good if you&#8217;re using a version control system to let more
+than one person edit a todo list. If two people add a task and then try to
+merge, they&#8217;ll get a conflict and have to resolve&nbsp;it&nbsp;manually.</p>
+<p><code>t</code> uses random IDs (actually <span class="caps"><span class="caps">SHA1</span></span> hashes) to order the todo list files. Once
+the list has a couple of tasks in it, adding more is far less likely to cause
+a merge conflict because the list&nbsp;is&nbsp;sorted.</p>
+<h2 id="installing-t">Installing&nbsp;t</h2>
+<p><code>t</code> requires <a href="http://python.org/">Python</a> 2.5 or newer, and some form of <span class="caps"><span class="caps">UNIX</span></span>-like shell (bash
+works well). It works on Linux, <span class="caps"><span class="caps">OS</span></span> X, and Windows (with <a href="http://www.cygwin.com/">Cygwin</a>).</p>
+<p>Installing and setting up <code>t</code> will take about&nbsp;one&nbsp;minute.</p>
+<p>First, <a href="http://bitbucket.org/sjl/t/get/tip.zip">download</a> the newest version or clone the Mercurial repository ( <code>hg
+clone http://bitbucket.org/sjl/t/</code> ). Put it anywhere&nbsp;you&nbsp;like.</p>
+<p>Next, decide where you want to keep your todo lists. I put mine in <code>~/tasks</code>.
+Create&nbsp;that&nbsp;directory:</p>
+<div class="codehilite"><pre>mkdir ~/tasks
+</pre></div>
+
+
+<p>Finally, set up an alias to run <code>t</code>. Put something like this in your
+<code>~/.bashrc</code> file:</p>
+<div class="codehilite"><pre><span class="nb">alias </span><span class="nv">t</span><span class="o">=</span><span class="s1">&#39;python ~/path/to/t.py --task-dir ~/tasks --list tasks&#39;</span>
+</pre></div>
+
+
+<p>Make sure you run <code>source ~/.bashrc</code> or restart your terminal window to make
+the alias&nbsp;take&nbsp;effect.</p>
+<h2 id="using-t">Using&nbsp;t</h2>
+<p><code>t</code> is quick and easy&nbsp;to&nbsp;use.</p>
+<h3 id="add-a-task">Add&nbsp;a&nbsp;Task</h3>
+<p>To add a task, use <code>t [task description]</code>:</p>
+<div class="codehilite"><pre><span class="gp">$</span> t Clean the apartment.
+<span class="gp">$</span> t Write chapter 10 of the novel.
+<span class="gp">$</span> t Buy more beer.
+<span class="gp">$</span>
+</pre></div>
+
+
+<h3 id="list-your-tasks">List&nbsp;Your&nbsp;Tasks</h3>
+<p>Listing your tasks is even easier &#8212; just use <code>t</code>:</p>
+<div class="codehilite"><pre><span class="gp">$</span> t
+<span class="go">9  - Buy more beer.</span>
+<span class="go">30 - Clean the apartment.</span>
+<span class="go">31 - Write chapter 10 of the novel.</span>
+<span class="gp">$</span>
+</pre></div>
+
+
+<p><code>t</code> will list all of your unfinished tasks and&nbsp;their&nbsp;IDs.</p>
+<h3 id="finish-a-task">Finish&nbsp;a&nbsp;Task</h3>
+<p>After you&#8217;re done with something, use <code>t -f ID</code> to&nbsp;finish&nbsp;it:</p>
+<div class="codehilite"><pre><span class="gp">$</span> t -f 31
+<span class="gp">$</span> t
+<span class="go">9  - Buy more beer.</span>
+<span class="go">30 - Clean the apartment.</span>
+<span class="gp">$</span>
+</pre></div>
+
+
+<h3 id="edit-a-task">Edit&nbsp;a&nbsp;Task</h3>
+<p>Sometimes you might want to change the wording of a task. You can use <code>t -e ID
+[new description]</code> to&nbsp;do&nbsp;that:</p>
+<div class="codehilite"><pre><span class="gp">$</span> t -e 30 Clean the entire apartment.
+<span class="gp">$</span> t
+<span class="go">9  - Buy more beer.</span>
+<span class="go">30 - Clean the entire apartment.</span>
+<span class="gp">$</span>
+</pre></div>
+
+
+<p>Yes, nerds, you can use sed-style&nbsp;substitution&nbsp;strings:</p>
+<div class="codehilite"><pre><span class="gp">$</span> t -e 9 /more/a lot more/
+<span class="gp">$</span> t
+<span class="go">9  - Buy a lot more beer.</span>
+<span class="go">30 - Clean the entire apartment.</span>
+<span class="gp">$</span>
+</pre></div>
+
+
+<h3 id="delete-the-task-list-if-its-empty">Delete the Task List if&nbsp;it&#8217;s&nbsp;Empty</h3>
+<p>If you keep your task list in a visible place (like your desktop) you might
+want it to be deleted if there are no tasks in it. To do this automatically
+you can use the <code>--delete-if-empty</code> option in&nbsp;your&nbsp;alias:</p>
+<div class="codehilite"><pre><span class="nb">alias </span><span class="nv">t</span><span class="o">=</span><span class="s1">&#39;python ~/path/to/t.py --task-dir ~/Desktop --list todo.txt --delete-if-empty&#39;</span>
+</pre></div>
+
+
+<h2 id="tips-and-tricks">Tips&nbsp;and&nbsp;Tricks</h2>
+<p><code>t</code> might be simple, but it can do a lot of&nbsp;interesting&nbsp;things.</p>
+<h3 id="count-your-tasks">Count&nbsp;Your&nbsp;Tasks</h3>
+<p>Counting your tasks is simple using the <code>wc</code> program:</p>
+<div class="codehilite"><pre><span class="gp">$</span> t | wc -l
+<span class="go">      2</span>
+<span class="gp">$</span>
+</pre></div>
+
+
+<h3 id="put-your-task-count-in-your-bash-prompt">Put Your Task Count in Your&nbsp;Bash&nbsp;Prompt</h3>
+<p>Want a count of your tasks right in your prompt?  Edit your <code>~/.bashrc</code> file:</p>
+<div class="codehilite"><pre><span class="nb">export </span><span class="nv"><span class="caps"><span class="caps">PS1</span></span></span><span class="o">=</span><span class="s2">&quot;[$(t | wc -l | sed -e&#39;s/ *//&#39;)] $<span class="caps"><span class="caps">PS1</span></span>&quot;</span>
+</pre></div>
+
+
+<p>Now you&#8217;ve got a prompt that looks something&nbsp;like&nbsp;this:</p>
+<div class="codehilite"><pre><span class="go">[2] $ t -f 30</span>
+<span class="go">[1] $ t Feed the cat.</span>
+<span class="go">[2] $</span>
+</pre></div>
+
+
+<h3 id="multiple-lists">Multiple&nbsp;Lists</h3>
+<p><code>t</code> is for people that want to <em>do</em> tasks, not organize them. With that said,
+sometimes it&#8217;s useful to be able to have at least <em>one</em> level of organization.
+To split up your tasks into different lists you can add a few&nbsp;more&nbsp;aliases:</p>
+<div class="codehilite"><pre><span class="nb">alias </span><span class="nv">g</span><span class="o">=</span><span class="s1">&#39;python ~/path/to/t.py --task-dir ~/tasks --list groceries&#39;</span>
+<span class="nb">alias </span><span class="nv">m</span><span class="o">=</span><span class="s1">&#39;python ~/path/to/t.py --task-dir ~/tasks --list music-to-buy&#39;</span>
+<span class="nb">alias </span><span class="nv">w</span><span class="o">=</span><span class="s1">&#39;python ~/path/to/t.py --task-dir ~/tasks --list wines-to-try&#39;</span>
+</pre></div>
+
+
+<h3 id="distributed-bugtracking">Distributed&nbsp;Bugtracking</h3>
+<p>Like the idea of distributed bug trackers like <a href="http://bugseverywhere.org/">BugsEverywhere</a>, but don&#8217;t
+want to use such a heavyweight system? You can use <code>t</code> instead.</p>
+<p>Add another alias to your <code>~/.bashrc</code> file:</p>
+<div class="codehilite"><pre><span class="nb">alias </span><span class="nv">b</span><span class="o">=</span><span class="s1">&#39;python ~/path/to/t.py --task-dir . --list bugs&#39;</span>
+</pre></div>
+
+
+<p>Now when you&#8217;re in your project directory you can use <code>b</code> to manage the list
+of bugs/tasks for that project. Add the <code>bugs</code> file to version control and
+you&#8217;re&nbsp;all&nbsp;set.</p>
+<p>Even people without <code>t</code> installed can view the bug list, because it&#8217;s&nbsp;plain&nbsp;text.</p>
+<h2 id="problems-contributions-etc">Problems,&nbsp;Contributions,&nbsp;Etc</h2>
+<p><code>t</code> was hacked together in a couple of nights to fit my needs. If you use it
+and find a bug, please let&nbsp;me&nbsp;know.</p>
+<p>If you want to request a feature feel free, but remember that <code>t</code> is meant to
+be simple. If you need anything beyond the basics you might want to look at
+<a href="http://ginatrapani.github.com/todo.txt-cli/">todo.txt</a> or <a href="http://taskwarrior.org/projects/show/taskwarrior/">TaskWarrior</a> instead. They&#8217;re great tools with lots of
+bells&nbsp;and&nbsp;whistles.</p>
+<p>If you want to contribute code to <code>t</code>, that&#8217;s great! Fork the <a href="http://bitbucket.org/sjl/t/">Mercurial
+repository</a> on BitBucket or the <a href="http://github.com/sjl/t/">git mirror</a> on GitHub and send me a&nbsp;pull&nbsp;request.</p>
+                
+            <!-- Hyde::Article::End -->
+        
+    </div>
+
+                    
+                
+            </div>
+
+            <div class="hrb">&nbsp;</div>
+
+            <footer>
+                <p>
+                    I'm also on
+                    <a href="https://bitbucket.org/yupbank/">Bitbucket</a>,
+                    <a href="https://github.com/yupbank/">GitHub</a>,
+                    <a href="https://twitter.com/badmotherfuck/">Twitter</a>,
+                </p>
+
+                This Blog is Generated by <a href="http://ringce.com/hyde" title="Generated by">hyde</a> and templated based on <a href="http://stevelosh.com" title="template based on">steve losh</a>
+            </footer>
+        </div>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-41135823-1', 'yupbank.github.io');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
