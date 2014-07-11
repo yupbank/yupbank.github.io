@@ -1,4 +1,9 @@
-##孙子兵法
+---
+layout: post
+title:  "the art of war"
+date:   2014-02-17 15:23:54
+categories: learning 
+---
 
 ##第一篇 计
 

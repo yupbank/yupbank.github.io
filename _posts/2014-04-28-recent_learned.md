@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "recent learned"
+date:   2014-04-28 15:23:54
+categories: learning 
+---
+
 ## The important thing is always fundermantal.
 
 ------------

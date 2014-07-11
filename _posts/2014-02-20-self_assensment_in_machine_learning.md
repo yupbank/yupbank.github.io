@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "self assessment in machine learning"
+date:   2014-02-20 15:23:54
+categories: learning 
+---
 ## Machine learning and statistical inference 
 
 I heard this term machine learning from the Stanford U online open course, when I was in my fresh year of college. 

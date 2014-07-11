@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "the vim tips"
+date:   2014-02-18 15:23:54
+categories: learning 
+---
+
 ### Seven habits of effective text editing
 
 Bram Moolenaar
