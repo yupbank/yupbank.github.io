@@ -1,0 +1,59 @@
+<h2>Matrix Factorization in recommendation</h2>
+
+<p>I am really confused about matrix factorization. 
+As many turtotial explain the key idea about how this model works. And what kind of tricks inside factotization.
+But when i decided to implement them, troubles come.
+A clear idea between a few commonly used factorization models from a implementation perspective.</p>
+
+<p>It&#39;s already been proved that matrix factorization is the best single model in prediction. As a new bee in recommendation, I think people like me should understand this model in every details.
+Since my cretiria about understanding is being able to implement. Clearly, just key idea can not fulfill my needs.</p>
+
+<p>So I have prepared my own study upon these models: SVD?, SVD++, SVD Feature and Factorization Machine. I am going to show you what&#39;s the same and different in between those models.</p>
+
+<h3>First of all, the model equations of above models are being listed:</h3>
+
+<h4>1),  SVD or NMF:</h4>
+
+<p>$$$R = U * \sigma * I $$$ or $$$ U*I $$$?</p>
+
+<p>Commonly used (matrix factorization) MF in recommendation are mostly modeling the raint matrix as $$$R = U*I$$$.</p>
+
+<p>But SVD is actually $$$ R = U* \sigma * I $$$.</p>
+
+<p>But why people referring to the first one as SVD? A few papers are addressing this because of high portion of missing values caused by sparseness in the user-item ratings matrix. </p>
+
+<p>And more over carelessly addressing only the relatively few known entries is highly prone to overfitting. Thus, the most basic factorization model are being proposed as $$$R = U*I$$$. </p>
+
+<p>So the main idea is realted to SVD, but as sparsity, simplified version are broadly used.</p>
+
+<p>Due to the over fitting probelm, so models in factorization employed objective function. Which has nothing to do with prediction directly, but to appoximate the parameter in a way we want, which in return do prediction.</p>
+
+<p>Also basic MF has this type of objective function: $$ argmin \sum{(\hat{R} - R)}^2 + \lambda*|\theta|_2^2 $$
+here $$$\theta$$$ denotes the set of pramaters which is U and I. And $$$\lambda$$$ denotes how much the regularization effects the approximation.
+Some recently basic, which is not state of art have bais term. </p>
+
+<p>$$ \hat{R} = bias + U*I $$</p>
+
+<p>And the objective function are still the same.</p>
+
+<h4>2), SVD++:</h4>
+
+<p>$$ \hat{R} =  Bias + (U+|feedback(U)|^{-1/2} \sum<em>{i \in feedback(u)} y</em>i)*I $$</p>
+
+<h4>3), SVD feature:</h4>
+
+<p>$$ \hat{R} = bias+(\sum<em>{g \in G} {\gamma</em>g bias<em>g}+ \sum\</em>{m \in M} {\alpha<em>m bias</em>m}+ \sum_{n \in N} {\beta<em>n bias</em>n} ) \
++(\sum_{m \in M} {\alpha<em>m U</em>m})^T * (\sum_{n \in N} {\beta<em>n I</em>n})
+$$</p>
+
+<h4>4), Factorization machine:</h4>
+
+<p>$$\hat{R} = w<em>0 + \sum</em>{j=1}^{P} {w<em>j x</em>j}+\
+1/2*\sum_{f=1}^{K} [(\sum_{j=1}^{P} {v_{j,f} x<em>j})^2-\sum\</em>{j=1}{P} {v_{jf}^2 x_j^2}] $$</p>
+
+<h3>The second thing i care is input.</h3>
+
+<p>How is input gonna perform different? Is it always are the instances? 
+I think the most important thing is that is features involved. Apperantly, from the equation, we can tell the SVD model has no room for extra features.
+While, SVD++, SVD feature and Factorization machine can employ both explicit and implicit features.
+Thus, implicit.</p>
