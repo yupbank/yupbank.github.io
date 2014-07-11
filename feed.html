@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom"><title>yupbank</title><link href="http://yupbank.github.io/feed/" rel="self" /><link href="http://yupbank.github.io"/><updated>2013-05-23T04:08:45Z</updated><id>http://yupbank.github.io/</id><entry><title type="html">learn vim</title><author><name>yupbank</name></author><link href="http://yupbank.github.io/blog/2013/03/learn-vim/"/><updated>2013-03-30T14:00:00Z</updated><published>2013-03-30T14:00:00Z</published><id>http://yupbank.github.io/blog/2013/03/learn-vim/</id><content type="html">
+                    
+                        
+                
+                    &lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;err&quot;&gt;##死命学习&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vimscript&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;##声明，这个是个人理解学习写&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;脚本，纯粹的学习，不带玩的。下面应该会学习&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ios&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;java&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;##目前还有雅思考试，更新于今天。&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;###&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chapter01&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;和&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;echom&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;echom&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;会缓存&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;###&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chapter02&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;用法&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;#chapter03&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;用法&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;###&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chapter04&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imap&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nmap&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vmap&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;三种模式下的&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;map&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;#chapter05&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nunmap&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iunmap&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vunmap&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;三种&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;unmap&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nnoremap&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;非循环&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;map&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;#chapter06&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mapleader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;设置老板键&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nnoremap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dd&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;使用老板键&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;maplocalleader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;设置小老板键&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;#chapter07&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nnoremap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ev&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vsplit&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;&lt;span class=&quot;caps&quot;&gt;MYVIMRC&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;一件分屏编辑配置文件，使用了老板键哦，&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;是真的&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cr&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，不是&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;&lt;span class=&quot;caps&quot;&gt;&lt;span class=&quot;caps&quot;&gt;ZZ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;大写&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;zz&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，一键关闭分的第二屏，自带保存&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nnoremap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sv&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;&lt;span class=&quot;caps&quot;&gt;MYVIMRC&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;一键激活配置文件&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;##&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;#chapter08&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iabbrev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adn&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
+
+  &lt;span class=&quot;err&quot;&gt;自动纠错命令，在编辑模式下纠正&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;adn&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;为&lt;/span&gt;&lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iabbrev&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;@@&lt;/span&gt;    &lt;span class=&quot;nx&quot;&gt;steve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;yu.com&lt;/span&gt;
+
+  &lt;span class=&quot;err&quot;&gt;设置私人邮箱版权等&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;###&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;#chapter09&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nnoremap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot; viw&amp;lt;esc&amp;gt;a&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;esc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hbi&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;esc&amp;gt;lel&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  瞬间给左右加上双引号!&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;###chapter10&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :inoremap &amp;lt;esc&amp;gt; &amp;lt;nop&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  关闭你的esc&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;###chapter11&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :setlocal 只给当前编辑有效果&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :nnoremap &amp;lt;buffer&amp;gt; Q add 这个效果有点不一样，对每一个buffer产生，对vssplit出来的新窗口等拥有神奇的效果&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;###chapter12&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :autocmd BufWritePre/BufNewFile/etc */*.html/*.js :write/:normal gg=G&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :autocmd FileType python nnoremap &amp;lt;buffer&amp;gt; &amp;lt;localleader&amp;gt;c I#&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  autocmd可以监听各种事件，比如写文件，创建新文件，比如当前是python文件，然后执行下面的操作，保存？设置gg=G？设置当前vim老板键+c 对句子加注释 #?&lt;/span&gt;
+
+
+&lt;span class=&quot;s2&quot;&gt;###chapter13&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :autocmd FileType python     :iabbrev &amp;lt;buffer&amp;gt; iff if:&amp;lt;left&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :autocmd FileType javascript :iabbrev &amp;lt;buffer&amp;gt; iff if ()&amp;lt;left&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  自动修改不同filetype的iff为对应语言的 if正确&lt;/span&gt;
+
+
+&lt;span class=&quot;s2&quot;&gt;###chapter14&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :autocmd BufWrite * :sleep 200m&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  傻逼作者，睡200分钟。。。&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :augroup testgroup&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :    autocmd BufWrite * :echom &amp;quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :    autocmd BufWrite * :echom &amp;quot;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Bar&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :augroup &lt;span class=&quot;caps&quot;&gt;&lt;span class=&quot;caps&quot;&gt;END&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  据作者说是会产生 输出 Foo和bar&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :augroup uncompress&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :  au!&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :  au BufEnter *.gz %!gunzip&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :augroup &lt;span class=&quot;caps&quot;&gt;&lt;span class=&quot;caps&quot;&gt;END&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  加 au！ 是为了，防止这个autocommand被执行两次，比如source一下vimrc，还会再被执行的时候，不会再autocommand一下&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;###chapter15&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :onoremap p i(&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  这个其实是把i( 加上自定义的名字p&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  加进去vimrc后， dp = di(  了呢。&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  :onoremap il( :&amp;lt;c-u&amp;gt;normal! F)vi(&amp;lt;cr&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  :onoremap in( :&amp;lt;c-u&amp;gt;normal! f(vi(&amp;lt;cr&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;  这些厉害的语句大概是在说，cin(/cil( 命令可以删除括号内或者其他什么的吧。。太厉害，先不纠结了&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id=&quot;chapter16&quot;&gt;chapter16&lt;/h3&gt;
+&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onoremap&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ih&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;-u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;execute&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;normal! ?^==&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;+$&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:nohlsearch&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;kvg_&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;err&quot;&gt;这个就厉害了，&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ih&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;是映射&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;execute&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;normal! ?^==&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;+$&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:nohlsearch&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;kvg_&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;这个就厉害了&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;执行在&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;模式下命令，但是有一个问题就是，不认识&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;这样的&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;..&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;所以要&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;excute.&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;搜索，&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==\\+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;匹配两个以上&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nohlsearch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;取消搜索的高亮&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;kvg_&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;向上一行选择到尾巴&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id=&quot;chapter17&quot;&gt;chapter17&lt;/h3&gt;
+&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;设置下面的状态栏：&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;是文件路径&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;      
+  &lt;span class=&quot;err&quot;&gt;状态栏还可以叠加，比如后面加&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;空格&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;空格&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;表示文件类型&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;表示当前行数&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;表示总行数&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;数字&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;表示左边填充几个字符的空格&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;%-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;数字&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;表示在右边填充几个字符&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;数字&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;将会用&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;去填充空格&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;表示全路径&lt;/span&gt;
+
+  &lt;span class=&quot;err&quot;&gt;###&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chapter18&lt;/span&gt;
+
+  &lt;span class=&quot;s&quot;&gt;&amp;quot; Vimscript file settings ----------------------&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vimscript&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{{{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;augroup&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filetype_vim&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;autocmd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;autocmd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileType&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setlocal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foldmethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;marker&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;augroup&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;&lt;span class=&quot;caps&quot;&gt;&lt;span class=&quot;caps&quot;&gt;END&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}}}&lt;/span&gt;
+
+
+  &lt;span class=&quot;err&quot;&gt;首先&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;augroup&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;是给设定语句分&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;然后，&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foldmethod&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;就会把&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;到&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;自动折叠了，此时&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;za&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;键可以打开和关闭她们&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setlocal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;
+
+  &lt;span class=&quot;err&quot;&gt;最重要&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foldlevelstart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id=&quot;chapter19&quot;&gt;chapter19&lt;/h3&gt;
+&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;    
+  &lt;span class=&quot;err&quot;&gt;将会输出&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，这个叫设置变量&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textwidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textwidth&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;首先&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textwidth&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;会变成&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，然后输出&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;80.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;基本上&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;就是取设定的值的意思&lt;/span&gt;
+
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textwidth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textwidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;首先&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textwidth&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;会变成&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;然后下句会输出&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;textwidth=100&amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;因为加了？&lt;/span&gt;
+
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;设定了局部的行号出现，&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;就是不出现。&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;为&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;的意思&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hello!&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pa&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;先输出&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@为寄存器的意思，&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;就是寄存一个&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;的变量，所以&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pa&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;将会把&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;粘贴到&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;那个地方&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;就会把刚刚&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;复制的东西，打印出来&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; 是未命名寄存器，就是刚刚y复制的内容咯&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;就会把刚刚&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;的&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;打印出来&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;registers&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;这个最关键&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id=&quot;chapter20&quot;&gt;chapter20&lt;/h3&gt;
+                
+            
+                    
+                </content></entry></feed>
