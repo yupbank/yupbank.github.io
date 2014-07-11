@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "matrix factorization in recommendation"
+date:   2014-05-16 15:23:54
+categories: learning 
+---
+
 ## Matrix Factorization in recommendation
 
 
