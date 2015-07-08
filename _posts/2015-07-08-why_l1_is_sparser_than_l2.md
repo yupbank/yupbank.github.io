@@ -20,4 +20,4 @@ following the trend defined by l1 and l2. and speed is just the y axis. we can e
 
 ![Images of l1 and l2](/miscs/charts.png)
 
-
+Obviously, the area under l1 is larger than l2, that means l1 is getting much faster to zero.
