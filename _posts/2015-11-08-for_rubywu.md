@@ -1,7 +1,7 @@
 ---
 layout: typer
-title:  "Why L1 is more sparse than L2"
-date:   2015-07-08 15:23:54
+title:  "导演，我要看视频!!"
+date:   2015-11-09 15:23:54
 categories: Machine
 ---
 haha
