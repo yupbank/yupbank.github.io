@@ -1,7 +1,7 @@
 name: "Peng Yu's Blog"
 markdown: redcarpet
 pygments: true
-url: http://yupbank.org
+url: http://yupbank.github.io
 
 pages_list:
     About: '/about'
