@@ -1,6 +1,6 @@
 name: "Peng Yu's Blog"
 markdown: kramdown
-pygments: true
+highlighter: rouge
 url: http://yupbank.github.io
 
 pages_list:
