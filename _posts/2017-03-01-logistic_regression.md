@@ -35,10 +35,8 @@ categories: learning
 			= -y(1 - \frac{1}{1+e^{-y*f_1(x)}})*x
 	$$ 
     - gradient for cross entropy loss:
-
     	$$ 
-	\frac{\partial{L_2}}{\partial{w}} = X^T*\{-y*\frac{f_2(x)*(1-f_2(x)}{f_2(x)} - (1-y)*\frac{-1*f_2(x)*(1-f_2(x))}{1 - f_2(x)}\} \\
-    		= X^T*(f_2(x)-y) 
+	\frac{\partial{L_2}}{\partial{w}} = X^T*\{-y*\frac{f_2(x)*(1-f_2(x)}{f_2(x)} - (1-y)*\frac{-1*f_2(x)*(1-f_2(x))}{1 - f_2(x)}\} = X^T*(f_2(x)-y) 
 	$$
 
 - Hessians for each
