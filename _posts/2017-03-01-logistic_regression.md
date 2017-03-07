@@ -11,7 +11,7 @@ categories: learning
 
 - Cross Entropy
 	- Entropy: $$ H(p) = -\sum_{i=1}^{n}p(x_i)log_bp(x_i) $$ 
-	- Cross Entropy $$ H(p, q) = E_p[-log(q)] = H(p) + D_{KL}(p||q) $$
+	- Cross Entropy $$H(p, q) = E_p[-log(q)] = H(p) + D_{KL}(p||q)$$
 	- With discrete p and q: $H(p, q) = -\sum_xp(x) log(q(x))$       
 
 
@@ -31,7 +31,7 @@ categories: learning
     - gradient for logistic loss:
 
 	$$
-		\frac{\partial{L_1}}{\partial{w}} =  \frac{1}{1+e^{-y*f_1(x)}}*e^{-y*f_1(x)}*-y*x \\
+		\frac{\partial{L_1}}{\partial{w}} =  x^T * \frac{1}{1+e^{-y*f_1(x)}}*e^{-y*f_1(x)}*-y \\
 			= -y(1 - \frac{1}{1+e^{-y*f_1(x)}})*x
 	$$ 
     - gradient for cross entropy loss:
