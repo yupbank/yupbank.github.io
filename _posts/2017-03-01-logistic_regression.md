@@ -32,7 +32,7 @@ categories: learning
 
 	$$
 		\frac{\partial{L_1}}{\partial{w}} =  x^T * \frac{1}{1+e^{-y*f_1(x)}}*e^{-y*f_1(x)}*-y \\
-			= -y(1 - \frac{1}{1+e^{-y*f_1(x)}})*x
+			= x^T * y(\frac{1}{1+e^{-y*f_1(x)}} - 1)
 	$$ 
     - gradient for cross entropy loss:
     	$$ 
@@ -42,7 +42,7 @@ categories: learning
 - Hessians for each
 	- hessian for logistic loss:
 	$$
-			\frac{\partial^2{L_1}}{\partial{w}} =  y\{ \frac{1}{1+e^{-y*f_1(x)}}*(1-\frac{1}{1+e^{-y*f_1(x)}})*(-yx) \}x
+			\frac{\partial^2{L_1}}{\partial{w}} =  x^T * y * \{ \frac{1}{1+e^{-y*f_1(x)}}*(1-\frac{1}{1+e^{-y*f_1(x)}})*(-yx) \}
 				$$
 	- hessian for cross entropy loss:
 		$$ 
