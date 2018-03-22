@@ -9,7 +9,7 @@ categories: learning
 
 L1 Norm as Regularization
 
-$J(h(\theta, X), y) + \lambda* |\theta|$
+$ J(h(\theta, X), y) + \lambda* |\theta| $
 
 L2 Norm as Regularization
 
@@ -23,11 +23,11 @@ Why L1 is always doing a better job introduce sparsity to $\theta$ ? It always t
 
 Like this graph here.
 
-![l1](/misc/l1.png)
+![l1](/miscs/l1.png)
 
 And this graph here.
 
-![l2](/misc/l2.png)
+![l2](/miscs/l2.png)
 
 But it is just not intuitive too me, maybe it is to most of people.
 
