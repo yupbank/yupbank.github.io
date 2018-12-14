@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Calculate basic statics"
-date:   2013-11-11 15:23:54
+date:   2018-10-16 15:23:54
 categories: learning 
 ---
 
