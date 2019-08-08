@@ -13,9 +13,7 @@ And achieved around two times faster than sklearn's cython implementation, with 
 If you are into decision tree regression, and variance reduction technique, you probably already familar with this equation.
 
 $$
-I_{V}(N)={\frac {1}{|S|^{2}}}\sum _{i\in S}\sum _{j\in S}{\frac {1}{2}}(y_{i}-y_{j})^{2}
-\\ {}& -({\frac {1}{|S_{l}|^{2}}}\sum _{i\in S_{l}}\sum _{j\in S_{l}}{\frac {1}{2}}(y_{i}-y_{j})^{2}
-\\ {}&+{\frac {1}{|S_{r}|^{2}}}\sum _{i\in S_{r}}\sum _{j\in S_{r}}{\frac {1}{2}}(y_{i}-y_{j})^{2}).
+I_{V}(N)={\frac {1}{|S|^{2}}}\sum _{i\in S}\sum _{j\in S}{\frac {1}{2}}(y_{i}-y_{j})^{2}  -({\frac {1}{|S_{l}|^{2}}}\sum _{i\in S_{l}}\sum _{j\in S_{l}}{\frac {1}{2}}(y_{i}-y_{j})^{2} +{\frac {1}{|S_{r}|^{2}}}\sum _{i\in S_{r}}\sum _{j\in S_{r}}{\frac {1}{2}}(y_{i}-y_{j})^{2}).
 $$
 
 The splitting criteria want to maximize the difference between variance of the data with weighted sum of variances in the splitted data(left group and right group).
@@ -28,7 +26,7 @@ There are maximum (N-1)*M splits we need to try.
 Before we actually start to split, we want to convert $I_{V}(N)$ into something more friendly with data locality and complexity.
 
 $$
-I_V{N} = \frac{ (\sum_{i\in S_{l}}{y_i})^2}{|S|*|S_l|} + \frac{ (\sum_{i\in S_{r}}{y_i})^2}{|S|*|S_r|} - (\frac{\sum_{i \in S}{y_i}}{|S|})^2
+I_{V}(N) = \frac{ (\sum_{i\in S_{l}}{y_i})^2}{|S|*|S_l|} + \frac{ (\sum_{i\in S_{r}}{y_i})^2}{|S|*|S_r|} - (\frac{\sum_{i \in S}{y_i}}{|S|})^2
 $$
 
 Now we have better idea on what to calculate. $\sum_{i\in S_{l}}{y_i}$ and $\sum_{i\in S_{r}}{y_i}$. 
