@@ -39,14 +39,17 @@ maximum_reduction = -inf
 
 for feature_i in all the features:
 	for (right_y_sum, right_cout), (left_y_sum, right_count) in split_by_feature_i:
-		variance_reduction = right_sum**2 /(data_size*right_count) + left_sum**2/(data_size*left_count) - (total_sum/data_size)**2
+		variance_reduction = ( right_sum**2 /(data_size*right_count) 
+					+ left_sum**2/(data_size*left_count) 
+					- (total_sum/data_size)**2
+					)
 		if variance_reduction > maxmimum_reduction:
 			maxmimum_reduction = variance_reduction
 
 ```
-And maybe you are smart enough to notice the $(total_sum/data_size)^2$ is static. we can move out of the for loop. only apply that to the maximum value.
+And maybe you are smart enough to notice the `(total_sum/data_size)^2` is static. we can move out of the for loop. only apply that to the maximum value.
 
-And yes, there is two for loops, we should be able to vectorize it. In order to do that, we need to use $right_sums = total_sum-left_sums$ and $right_counts=data_size-left_counts$.
+And yes, there is two for loops, we should be able to vectorize it. In order to do that, we need to use `right_sums = total_sum-left_sums` and `right_counts=data_size-left_counts`.
 we can have use two matrix with shape [data_size, n_feature] for left_sums, and matrix with shape [data_size, n_feature] for left_counts.
 so that 
 ```
@@ -100,4 +103,4 @@ With a final touch. we can further introduce a speed up on the improvement.
                              cumsums[:-1] - parent_mean * ratio_b)
 ```
 
-And now, we are half the speed of sklearn's cython version !!!
+And now, we are twice the speed of sklearn's cython version !!!
