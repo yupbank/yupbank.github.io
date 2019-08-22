@@ -89,7 +89,7 @@ With the two trick, we already have the same speed with sklearn's cythong implem
 We can tune the the equation more friendly with vectorization.
 
 $$
-I(S) = (\sqrt{\frac{1}{|S_l|*(|S|-|S_l|)}}*\sum_{i \in S_l}{y_i} - \sqrt{\frac{1}{|S|-|S_l|}}* \frac{\sum_{i \in S}{y_i}}{|S|})^2
+I(S) = (\sqrt{\frac{1}{|S_l|*(|S|-|S_l|)}}*\sum_{i \in S_l}{y_i} - \sqrt{\frac{|S_l|}{|S|-|S_l|}}* \frac{\sum_{i \in S}{y_i}}{|S|})^2
 $$
 
 
