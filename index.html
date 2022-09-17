@@ -1,10 +1,19 @@
 ---
 layout: default
-title: Peng Yu's Blog
+title: Peng Yu
 ---
 
+
 <div id="home">
-  <h1>Blog Posts</h1>
+  <h1>About me</h1>
+  <p>
+	I am a staff data developer at Shopify and a Ph.D. Candidate at Telecom Paris.
+	My research interests are traditional machine learning and primary decision trees. I like applying combinatorial optimization and computational geometry methods to machine learning algorithms.
+	I'm also interested in big data problems in general.
+	Before Shopify, I also worked at Lenovo Machine Intelligence Center, Huawei Noah's Ark Lab, and SOHU.
+  </p>
+
+  <h2>Blog posts</h2>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
