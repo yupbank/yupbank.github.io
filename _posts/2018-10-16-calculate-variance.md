@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Calculate basic statics"
+title:  "Calculate basic statistics"
 date:   2018-10-16 15:23:54
 categories: learning 
 ---

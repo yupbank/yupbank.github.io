@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Decision Tree Vairance Approximation"
+title:  "Decision Tree Variance Approximation"
 date:   2018-12-14 15:23:54
 categories: fun
 ---
